@@ -3,12 +3,13 @@
     "type": "library",
     "description": "Your package description goes here",
     "keywords": ["relevant","tags","go","here"],
+    "minimum-stability": "1.0",
     "homepage": "https://example.com",
     "license": "MIT",
     "authors": [
         {
              "name": "Hieu Nguyen",
-             "email": "hieunguyen1203@outlook.com",
+             "email": "hn@hi.hu",
              "homepage": "http://example.com",
              "role": "Developer"
         }
