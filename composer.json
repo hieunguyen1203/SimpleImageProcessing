@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Your package description goes here",
     "keywords": ["relevant","tags","go","here"],
-    "minimum-stability": "1.0",
+    "minimum-stability": "stable",
     "homepage": "https://example.com",
     "license": "MIT",
     "authors": [
