@@ -6,7 +6,7 @@ class SimpleImageProcessing {
     var $image;
     var $image_type;
 
-    function load($filename) {
+    public function load($filename) {
 
         $image_info = getimagesize($filename);
         $this->image_type = $image_info[2];
@@ -24,7 +24,7 @@ class SimpleImageProcessing {
             $this->image = imagecreatefromwebp($filename);
         }
     }
-    function save($filename, $image_type=IMAGETYPE_JPEG, $compression=75, $permissions=null) {
+    public function save($filename, $image_type=IMAGETYPE_JPEG, $compression=75, $permissions=null) {
 
         if( $image_type == IMAGETYPE_JPEG ) {
             imagejpeg($this->image,$filename,$compression);
@@ -41,17 +41,17 @@ class SimpleImageProcessing {
             chmod($filename,$permissions);
         }
     }
-    function transparency_png(){
+    public function transparency_png(){
         $background = imagecolorallocate($this->image , 0, 0, 0);
         imagecolortransparent($this->image, $background);
         imagealphablending($this->image, false);
     }
 
-    function grayscale_png(){
+    public function grayscale_png(){
         imagefilter($this->image, IMG_FILTER_GRAYSCALE);
     }
 
-    function output($image_type=IMAGETYPE_JPEG) {
+    public function output($image_type=IMAGETYPE_JPEG) {
 
         if( $image_type == IMAGETYPE_JPEG ) {
             imagejpeg($this->image);
@@ -64,40 +64,40 @@ class SimpleImageProcessing {
             imagepng($this->image);
         }
     }
-    function getWidth() {
+    public function getWidth() {
 
         return imagesx($this->image);
     }
-    function getHeight() {
+    public function getHeight() {
 
         return imagesy($this->image);
     }
-    function resizeToHeight($height) {
+    public function resizeToHeight($height) {
 
         $ratio = $height / $this->getHeight();
         $width = intval($this->getWidth() * $ratio);
         $this->resize($width,$height);
     }
 
-    function resizeToWidth($width) {
+    public function resizeToWidth($width) {
         $ratio = $width / $this->getWidth();
         $height = intval($this->getheight() * $ratio);
         $this->resize($width,$height);
     }
 
-    function scale($scale) {
+    public function scale($scale) {
         $width = $this->getWidth() * $scale/100;
         $height = $this->getheight() * $scale/100;
         $this->resize($width,$height);
     }
 
-    function resize($width,$height) {
+    public function resize($width,$height) {
         $new_image = imagecreatetruecolor($width, $height);
         imagecopyresampled($new_image, $this->image, 0, 0, 0, 0, $width, $height, $this->getWidth(), $this->getHeight());
         $this->image = $new_image;
     }
 
-    function watermark_image($overlay){
+    public function watermark_image($overlay){
         $watermark_type = getimagesize($overlay)[2];
         if( $watermark_type == IMAGETYPE_JPEG ) {
 
