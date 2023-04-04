@@ -3,8 +3,8 @@ namespace HieuNguyen\Image;
 
 class SimpleImageProcessing {
 
-    var $image;
-    var $image_type;
+    private $image;
+    private $image_type;
 
     public function load($filename) {
 
