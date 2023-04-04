@@ -6,6 +6,9 @@
     "minimum-stability": "stable",
     "homepage": "https://example.com",
     "license": "MIT",
+    "require": {
+    "php": ">=7.0.0"
+	},
     "authors": [
         {
              "name": "Hieu Nguyen",
