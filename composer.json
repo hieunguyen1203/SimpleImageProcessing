@@ -16,5 +16,10 @@
              "homepage": "http://example.com",
              "role": "Developer"
         }
-    ]
+    ],
+"autoload": {
+        "psr-4": {
+            "HieuNguyen\\": "src/"
+        }
+    },
 }
