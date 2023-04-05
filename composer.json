@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hieund\\SimpleImageProcessing\\": "src/"
+            "Hieund\\": "src/"
         }
     },
     "authors": [

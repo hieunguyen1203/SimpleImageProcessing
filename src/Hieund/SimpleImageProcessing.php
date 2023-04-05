@@ -1,5 +1,5 @@
 <?php
-namespace HieuNguyen\Image;
+namespace Hieund;
 
 class SimpleImageProcessing {
 
