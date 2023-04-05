@@ -1,6 +1,6 @@
 {
     "name": "hieund/simple-image-processing",
-    "description": "No description",
+    "description": "No des",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -10,8 +10,9 @@
     },
     "authors": [
         {
-            "name": "hieund"
+            "name": "Hieund"
         }
     ],
+    "minimum-stability": "stable",
     "require": {}
 }
